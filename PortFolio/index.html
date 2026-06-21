@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Muhammad Zubair Ilyas — Full-stack software engineer building end-to-end systems, from interface to database." />
+  <title>Muhammad Zubair Ilyas — Software Engineer</title>
+
+  <!-- Fonts: Fontshare (Cabinet Grotesk) + Google Fonts (Inter, JetBrains Mono) -->
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav" id="nav" aria-label="Primary">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo" aria-label="Home">
+        <span class="nav__logo-mark">Z</span>
+        <span class="nav__logo-text">zubair<span class="accent">.</span></span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="assets/resume.pdf" class="btn btn--primary nav__resume" download>
+        <span>Resume</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v14m0 0l-5-5m5 5l5-5M5 21h14"/></svg>
+      </a>
+      <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ MOBILE MENU OVERLAY ============ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="assets/resume.pdf" download>Download Resume</a></li>
+    </ul>
+  </div>
+
+  <!-- ============ CIRCUIT TRACE (Signature Element) ============ -->
+  <div class="circuit-trace" id="circuitTrace" aria-hidden="true">
+    <div class="circuit-trace__line"></div>
+    <div class="circuit-trace__node" data-target="hero"><span></span></div>
+    <div class="circuit-trace__node" data-target="about"><span></span></div>
+    <div class="circuit-trace__node" data-target="skills"><span></span></div>
+    <div class="circuit-trace__node" data-target="experience"><span></span></div>
+    <div class="circuit-trace__node" data-target="projects"><span></span></div>
+    <div class="circuit-trace__node" data-target="contact"><span></span></div>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero section" id="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__gradient"></div>
+        <div class="hero__noise"></div>
+      </div>
+
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow reveal">Software Engineer · Full-Stack</p>
+          <h1 class="hero__name reveal">
+            <span class="reveal-group">Muhammad</span>
+            <span class="reveal-group">Zubair Ilyas</span>
+          </h1>
+          <p class="hero__tagline reveal">
+            I build full-stack systems end-to-end — from interface to database — and ship them.
+          </p>
+          <div class="hero__cta reveal">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <!-- Hand-built wireframe stack illustration -->
+          <svg class="hero__stack" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="stackGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#3A63E8" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#0F2466" stop-opacity="0.4"/>
+              </linearGradient>
+              <linearGradient id="stackGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#C9A24B" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#C9A24B" stop-opacity="0.1"/>
+              </linearGradient>
+            </defs>
+            <!-- Isometric layered stack -->
+            <g transform="translate(200 200)">
+              <!-- Bottom layer -->
+              <path d="M -140 40 L 0 110 L 140 40 L 0 -30 Z" fill="none" stroke="url(#stackGrad)" stroke-width="1.5" opacity="0.5"/>
+              <path d="M -140 40 L -140 60 L 0 130 L 0 110 Z" fill="#0F2466" opacity="0.3" stroke="#1C3FAA" stroke-width="1"/>
+              <path d="M 140 40 L 140 60 L 0 130 L 0 110 Z" fill="#1C3FAA" opacity="0.25" stroke="#3A63E8" stroke-width="1"/>
+              <!-- Middle layer -->
+              <path d="M -140 -10 L 0 60 L 140 -10 L 0 -80 Z" fill="none" stroke="url(#stackGrad)" stroke-width="1.5" opacity="0.7"/>
+              <path d="M -140 -10 L -140 10 L 0 80 L 0 60 Z" fill="#0F2466" opacity="0.4" stroke="#1C3FAA" stroke-width="1"/>
+              <path d="M 140 -10 L 140 10 L 0 80 L 0 60 Z" fill="#1C3FAA" opacity="0.3" stroke="#3A63E8" stroke-width="1"/>
+              <!-- Top layer -->
+              <path d="M -140 -60 L 0 10 L 140 -60 L 0 -130 Z" fill="#0F2466" opacity="0.5" stroke="#3A63E8" stroke-width="1.5"/>
+              <path d="M -140 -60 L -140 -40 L 0 30 L 0 10 Z" fill="#1C3FAA" opacity="0.4" stroke="#3A63E8" stroke-width="1"/>
+              <path d="M 140 -60 L 140 -40 L 0 30 L 0 10 Z" fill="#3A63E8" opacity="0.35" stroke="#3A63E8" stroke-width="1"/>
+              <!-- Accent dot -->
+              <circle cx="0" cy="-60" r="4" fill="#C9A24B"/>
+              <!-- Grid lines on top face -->
+              <path d="M -70 -95 L 70 -25 M -70 -25 L 70 -95" stroke="#3A63E8" stroke-width="0.5" opacity="0.4"/>
+              <path d="M -105 -77 L 105 -43 M -105 -43 L 105 -77" stroke="#3A63E8" stroke-width="0.5" opacity="0.3"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="hero__scroll-cue" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-dot"></span>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section section--padded" id="about">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">01 — About</p>
+          <h2 class="section__title">Building systems, not just screens.</h2>
+        </header>
+        <div class="about__grid">
+          <div class="about__narrative">
+            <p>
+              I'm a final-year software engineering student at COMSATS University Islamabad
+              with a <strong>3.48 SGPA</strong> and a habit of finishing what I start. Most of my
+              work lives at the intersection of clean interfaces and serious backends — I'd
+              rather ship a working API than spend another week debating a color palette.
+            </p>
+            <p>
+              Over the last two years I've shipped six production-grade projects, worked as a
+              lab assistant mentoring 100+ juniors through their first real code reviews, and
+              spent a stint as a requirement engineer turning vague stakeholder wishes into
+              specs that developers actually respect. I'm looking for a full-stack role where
+              I can keep shipping.
+            </p>
+          </div>
+          <aside class="about__stats" aria-label="Key facts">
+            <div class="stat-badge">
+              <span class="stat-badge__value">3.48</span>
+              <span class="stat-badge__label">SGPA · Software Engineering</span>
+            </div>
+            <div class="stat-badge">
+              <span class="stat-badge__value">100+</span>
+              <span class="stat-badge__label">Students mentored as Lab Assistant</span>
+            </div>
+            <div class="stat-badge">
+              <span class="stat-badge__value">6</span>
+              <span class="stat-badge__label">Shipped full-stack projects</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--padded" id="skills">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">02 — Skills</p>
+          <h2 class="section__title">The toolbox.</h2>
+        </header>
+        <div class="skills__grid">
+          <div class="skill-group">
+            <h3 class="skill-group__label">Languages</h3>
+            <div class="skill-group__tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Python</span>
+              <span class="tag">Java</span>
+              <span class="tag">C++</span>
+              <span class="tag">SQL</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__label">Front-End</h3>
+            <div class="skill-group__tags">
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">HTML5 / CSS3</span>
+              <span class="tag">Tailwind</span>
+              <span class="tag">Redux</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__label">Back-End</h3>
+            <div class="skill-group__tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">REST</span>
+              <span class="tag">GraphQL</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__label">Databases</h3>
+            <div class="skill-group__tags">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Redis</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__label">AI / APIs</h3>
+            <div class="skill-group__tags">
+              <span class="tag">TensorFlow</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">OpenAI API</span>
+              <span class="tag">Hugging Face</span>
+              <span class="tag">LangChain</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__label">Tools</h3>
+            <div class="skill-group__tags">
+              <span class="tag">Git</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Figma</span>
+              <span class="tag">Postman</span>
+              <span class="tag">Jira</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section--padded" id="experience">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">03 — Experience</p>
+          <h2 class="section__title">Where I've worked.</h2>
+        </header>
+        <div class="timeline">
+          <article class="timeline__entry">
+            <header class="timeline__head">
+              <div>
+                <h3 class="timeline__role">Lab Assistant — Programming Fundamentals</h3>
+                <p class="timeline__org">COMSATS University Islamabad</p>
+              </div>
+              <time class="timeline__date">2023 — Present</time>
+            </header>
+            <ul class="timeline__bullets">
+              <li>Lead weekly lab sessions for 100+ first-year students through C++ and Python fundamentals.</li>
+              <li>Review code, debug student submissions, and run office hours — turning "it doesn't work" into "here's why."</li>
+              <li>Designed three custom lab assignments adopted across two sections of the course.</li>
+            </ul>
+          </article>
+          <article class="timeline__entry">
+            <header class="timeline__head">
+              <div>
+                <h3 class="timeline__role">Requirement Engineer (Intern)</h3>
+                <p class="timeline__org">Software House · Islamabad</p>
+              </div>
+              <time class="timeline__date">Summer 2024</time>
+            </header>
+            <ul class="timeline__bullets">
+              <li>Translated stakeholder interviews into structured SRS documents for two client projects.</li>
+              <li>Built user stories, acceptance criteria, and flow diagrams that went straight into the dev sprint backlog.</li>
+              <li>Bridged the gap between non-technical clients and the engineering team — cutting revision cycles by ~30%.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section section--padded" id="projects">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">04 — Projects</p>
+          <h2 class="section__title">Things I've shipped.</h2>
+        </header>
+
+        <div class="projects__grid">
+
+          <article class="project-card" data-project="0" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="project-card__bg project-card__bg--moderation" aria-hidden="true"></div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">AI Content Moderation Platform</h3>
+              <p class="project-card__desc">ML-powered system that flags toxic, spam, and policy-violating content in real time across text and image inputs.</p>
+              <div class="project-card__tags">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">React</span>
+                <span class="tag tag--more">+2</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="1" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="project-card__bg project-card__bg--pharma" aria-hidden="true"></div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">PharmaSync</h3>
+              <p class="project-card__desc">End-to-end pharmacy management syncing inventory, prescriptions, and supplier orders in one dashboard.</p>
+              <div class="project-card__tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">React</span>
+                <span class="tag tag--more">+1</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="2" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="project-card__bg project-card__bg--portal" aria-hidden="true"></div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Student &amp; Societies Portal</h3>
+              <p class="project-card__desc">University portal connecting students to clubs, events, and society memberships with role-based access.</p>
+              <div class="project-card__tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Prisma</span>
+                <span class="tag">Tailwind</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="3" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="project-card__bg project-card__bg--game" aria-hidden="true"></div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Humans vs. Aliens</h3>
+              <p class="project-card__desc">Browser-based multiplayer strategy game with real-time matchmaking and persistent leaderboards.</p>
+              <div class="project-card__tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Canvas</span>
+                <span class="tag">Socket.io</span>
+                <span class="tag">Node.js</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="4" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="project-card__bg project-card__bg--library" aria-hidden="true"></div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Library Management System</h3>
+              <p class="project-card__desc">Full CRUD system for catalog management, member tracking, and transaction history with role-based permissions.</p>
+              <div class="project-card__tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Thymeleaf</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="5" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="project-card__bg project-card__bg--fight" aria-hidden="true"></div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">2D Fighting Game &amp; Console UNO</h3>
+              <p class="project-card__desc">A sprite-based fighting game with combo mechanics, plus a terminal-rendered UNO implementation with AI opponents.</p>
+              <div class="project-card__tags">
+                <span class="tag">C++</span>
+                <span class="tag">SDL2</span>
+                <span class="tag">Java</span>
+                <span class="tag">Swing</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--padded" id="contact">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">05 — Contact</p>
+          <h2 class="section__title">Let's build something.</h2>
+        </header>
+        <div class="contact__grid">
+          <ul class="contact__list" role="list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div>
+                <span class="contact__label">Email</span>
+                <a href="mailto:zubair.ilyas@example.com">zubair.storehub@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div>
+                <span class="contact__label">Phone</span>
+                <a href="tel:+923001234567">+92 325 5187088</a>
+              </div>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <span class="contact__label">Location</span>
+                <span>Islamabad, Pakistan</span>
+              </div>
+            </li>
+          </ul>
+          <div class="contact__social">
+            <a href="https://linkedin.com/in/zubair-ilyas-460bb6337" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/Zubairilyas1" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© 2026 Muhammad Zubair Ilyas</p>
+        <p>Made with ❤ </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============ PROJECT MODAL ============ -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" tabindex="-1">
+      <button class="modal__close" data-close aria-label="Close dialog">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal__body">
+        <p class="modal__eyebrow" id="modalEyebrow"></p>
+        <h3 class="modal__title" id="modalTitle"></h3>
+        <p class="modal__desc" id="modalDesc"></p>
+        <div class="modal__stack" id="modalStack"></div>
+        <ul class="modal__highlights" id="modalHighlights"></ul>
+        <a href="#" class="btn btn--primary modal__github" id="modalGithub" target="_blank" rel="noopener">
+          <span>View on GitHub</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
